@@ -10,8 +10,8 @@
 
     // Default Configs
     var config = {
-      'wrapperHtmlClass' : '.paragraph',
-      'spanHtmlClass'    : 'en',
+      wrapperHtmlClass : '.paragraph',
+      spanHtmlClass    : 'en',
     };
 
     if (settings) {
