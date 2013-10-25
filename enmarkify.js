@@ -28,7 +28,7 @@
     thisParagraph.html("");
       
       $.each(words, function(index, value) {
-        if (value.match(/\b\w+/g)) {
+        if (value.match(/^[a-zA-Z]/)) {
           
           var newValue = value.replace(value, '<span class="'+config.spanHtmlClass+'">'+value+'</span>');
           
