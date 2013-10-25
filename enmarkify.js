@@ -17,42 +17,42 @@
     if (settings) {
       $.extend(config, settings);
     }
-
-
-    var words = $(config.wrapperHtmlClass).html().split(" ");
     
-    var newWords = [];
+    $(config.wrapperHtmlClass).each(function(i, v) {
+      
+      var thisParagraph = $(this);
+      
+      var words = thisParagraph.html().split(" ");
     
     // Reset non-detected paragraphs
-    $(config.wrapperHtmlClass).html("");
-    
-	  $.each(words, function(index, value) {
-	  	if (value.match(/\b\w+/g)) {
-        
-			  var newValue = value.replace(value, '<span class="'+config.spanHtmlClass+'">'+value+'</span>');
-        
-        if (words.length == index) {
-          $(config.wrapperHtmlClass).append(newValue);
+    thisParagraph.html("");
+      
+      $.each(words, function(index, value) {
+        if (value.match(/\b\w+/g)) {
+          
+          var newValue = value.replace(value, '<span class="'+config.spanHtmlClass+'">'+value+'</span>');
+          
+          if (words.length == index) {
+            thisParagraph.append(newValue);
+          } else {
+            thisParagraph.append(newValue+' ');
+          }
+          
         } else {
-          $(config.wrapperHtmlClass).append(newValue+' ');
+          
+          if (words.length == index) {
+            thisParagraph.append(value);
+          } else {
+            thisParagraph.append(value+' ');
+          }
+          
         }
-        
-      } else {
-        
-        if (words.length == index) {
-          $(config.wrapperHtmlClass).append(value);
-        } else {
-          $(config.wrapperHtmlClass).append(value+' ');
-        }
-        
-      }
-	  });
+      
+      });
 
+    });
 
     return this;
   };
 
 }(window.jQuery)
-
-
-$.enMarkify();
