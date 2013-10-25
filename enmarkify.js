@@ -12,6 +12,7 @@
     var config = {
       wrapperHtmlClass : '.paragraph',
       spanHtmlClass    : 'en',
+      elementTag       : 'span',
     };
 
     if (settings) {
@@ -24,13 +25,13 @@
       
       var words = thisParagraph.html().split(" ");
     
-    // Reset non-detected paragraphs
-    thisParagraph.html("");
+      // Reset non-detected paragraphs
+      thisParagraph.html("");
       
       $.each(words, function(index, value) {
         if (value.match(/^[a-zA-Z]/)) {
           
-          var newValue = value.replace(value, '<span class="'+config.spanHtmlClass+'">'+value+'</span>');
+          var newValue = value.replace(value, '<'+config.elementTag+' class="'+config.spanHtmlClass+'">'+value+'</'+config.elementTag+'>');
           
           if (words.length == index) {
             thisParagraph.append(newValue);
