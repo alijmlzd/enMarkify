@@ -9,7 +9,7 @@ call enMarkify with `$.enMarkify();`.
 
 ## Options
 * `wrapperHtmlClass`: html class that you used in your page to wrap your paragraphs. Default is `.paragraph`.
-* `spanHtmlClass`: set html class that you want to giv to english words. Default is `en`.
+* `spanHtmlClass`: set html class that you want to give to english words. Default is `en`.
 
 `$.enMarkify({wrapperHtmlClass: '.paragraph', spanHtmlClass: 'en'})`
 
