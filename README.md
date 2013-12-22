@@ -3,7 +3,7 @@ enMarkify
 
 Detect english words in paragraphs and push them to a `<span>`.
 
-See the demo: http://codepen.io/aliha/full/aBLlh
+See the demo: http://codepen.io/aliha/pen/aBLlh
 
 ## Usage
 includ `enmarkify.js` with zeptoJS or jQuery lib.
