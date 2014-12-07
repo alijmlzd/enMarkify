@@ -2,7 +2,7 @@
 
   /* 
    * enMarkify
-   * Ali Jamalzadeh - @alihaa
+   * Ali Jamalzadeh - @alijmlzd
    * Detect english words in paragraphs and push them to a <span>.
    */
 
